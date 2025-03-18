@@ -13,8 +13,9 @@ const dbx = new Dropbox({
 });
 
 const rl = readline.createInterface({ input, output });
-  
-async function ListFiles(): Promise<any> {
+
+// Thanks. I hate it.
+async function ListFiles(): Promise<(files.FileMetadataReference | files.FolderMetadataReference | files.DeletedMetadataReference)[]> {
 
     try {
         let response = await dbx.filesListFolder({ path: '' });
@@ -35,7 +36,7 @@ async function GetFile(): Promise<string> {
 
 }
 
-async function main(dbx: Dropbox): Promise<any> {
+async function main(dbx: Dropbox): Promise<void> {
 
         try {
             let entries = await ListFiles()
