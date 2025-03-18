@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import Axios from "axios";
 
-async function DownloadImage(url: string, filepath: string) {
+async function DownloadImage(url: string, filepath: string): Promise<string> {
     const response = await Axios({
         url,
         method: 'GET',
