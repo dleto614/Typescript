@@ -22,7 +22,7 @@ class Triangle implements Shape {
   constructor(public base: number, public height: number) { }
 
   GetArea(): number {
-    return 0.5 * this.base * this.height;
+    return (1/2) * this.base * this.height;
   }
 }
 
