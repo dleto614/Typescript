@@ -7,7 +7,7 @@ class Circle implements Shape {
 
     // (4/3) * pi * radius to the 3rd power
     GetVolume(): number {
-        return (4.0/3) * Math.PI * Math.pow(this.radius, 3); 
+        return (4/3) * Math.PI * Math.pow(this.radius, 3); 
     }
 }
 
@@ -28,7 +28,7 @@ class Triangle implements Shape {
 
     // 1/2 * base * height * length
     GetVolume(): number {
-        return (1.0/2.0) * this.base * this.height * this.length;
+        return (1/2) * this.base * this.height * this.length;
     }
 
 }
